@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class anoninfoMod(loader.Module):
-    """Show userbot info"""
+    """Показывает информацию о юзерботе"""
 
     strings = {
         "name": "AnonInfo",
@@ -41,11 +41,11 @@ class anoninfoMod(loader.Module):
         "prefix": "Prefix",
         "up-to-date": "😌 Up-to-date",
         "update_required": "😕 Update required </b><code>.update</code><b>",
-        "_cfg_cst_msg": "Custom message for info. May contain {me}, {version}, {build}, {prefix}, {platform} keywords",
-        "_cfg_cst_btn": "Custom button for info. Leave empty to remove button",
-        "_cfg_cst_bnr": "Custom Banner for info.",
-        "_cfg_cst_frmt": "Custom fileformat for Banner info.",
-        "_cfg_banner": "Set `True` in order to disable an image banner",
+        "_cfg_cst_msg": "Кастомное сообщение для инфо. Может содержать {me}, {version}, {build}, {prefix}, {platform} keywords",
+        "_cfg_cst_btn": "Кастомная кнопка для инфо. Оставьте пустым, чтобы удалить кнопку",
+        "_cfg_cst_bnr": "Кастомный баннер для инфо",
+        "_cfg_cst_frmt": "Кастомный формат файла для баннера",
+        "_cfg_banner": "Установите `True`, чтобы отключить баннер с изображением",
     }
 
     def __init__(self):
@@ -168,7 +168,7 @@ class anoninfoMod(loader.Module):
 
     @loader.unrestricted
     async def anoninfocmd(self, message: Message):
-        """Send userbot info"""
+        """Отправить информацию о юзерботе"""
         m1 = self._get_mark(1)
         m2 = self._get_mark(2)
         m3 = self._get_mark(3)
