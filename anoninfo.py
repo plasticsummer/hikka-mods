@@ -59,7 +59,8 @@ class anoninfoMod(loader.Module):
                 "custom_button1",
                 ["🔥 Apodiktum Hikka Modules 🔥", "https://t.me/apodiktum_modules"],
                 lambda: self.strings("_cfg_cst_btn"),
-                validator=loader.validators.Series(min_len=0, max_len=2, doc=ru),
+                validator=loader.validators.Series(min_len=0, max_len=2),
+                loader.validator.doc["ru]
             ),
             loader.ConfigValue(
                 "custom_button2",
