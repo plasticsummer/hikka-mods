@@ -35,17 +35,17 @@ class anoninfoMod(loader.Module):
 
     strings = {
         "name": "AnonInfo",
-        "owner": "Owner",
-        "version": "Version",
-        "build": "Build",
-        "prefix": "Prefix",
-        "up-to-date": "😌 Up-to-date",
-        "update_required": "😕 Update required </b><code>.update</code><b>",
-        "_cfg_cst_msg": "Кастомное сообщение для инфо. Может содержать {me}, {version}, {build}, {prefix}, {platform} keywords",
-        "_cfg_cst_btn": "Кастомная кнопка для инфо. Оставьте пустым, чтобы удалить кнопку",
-        "_cfg_cst_bnr": "Кастомный баннер для инфо",
-        "_cfg_cst_frmt": "Кастомный формат файла для баннера",
-        "_cfg_banner": "Установите `True`, чтобы отключить баннер с изображением",
+        "owner": "Владелец",
+        "version": "Версия",
+        "build": "Сборка",
+        "prefix": "Префикс",
+        "up-to-date": "😌 Актуальная версия",
+        "update_required": "😕 Требуется обновление </b><code>.update</code><b>",
+        "_cfg_cst_msg": "Кастомный текст сообщения в info. Может содержать ключевые слова {me}, {version}, {build}, {prefix}, {platform}",
+        "_cfg_cst_btn": "Кастомная кнопка в info. Оставь пустым, чтобы убрать кнопку",
+        "_cfg_cst_bnr": "Кастомный баннер в info",
+        "_cfg_cst_frmt": "Кастомный формат файла для баннера в info",
+        "_cfg_banner": "Поставь `True`, чтобы отключить баннер с изображением",
     }
 
     def __init__(self):
@@ -60,7 +60,6 @@ class anoninfoMod(loader.Module):
                 ["🔥 Apodiktum Hikka Modules 🔥", "https://t.me/apodiktum_modules"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(min_len=0, max_len=2),
-                doc="ru"
             ),
             loader.ConfigValue(
                 "custom_button2",
